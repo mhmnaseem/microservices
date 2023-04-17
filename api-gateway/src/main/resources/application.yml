@@ -1,0 +1,39 @@
+#server:
+#  port: 9191
+#
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  application:
+    name: "API-GATEWAY"
+  config:
+    import: 'optional:configserver:http://localhost:8888'
+#  cloud:
+#    gateway:
+#      discovery:
+#        locator:
+#          enabled: true
+#          lower-case-service-id: true
+
+#  cloud:
+#    gateway:
+#        routes:
+#          - id: EMPLOYEE-SERVICE
+#            uri: lb://EMPLOYEE-SERVICE
+#            predicates:
+#              - Path=/api/employees/**
+#          - id: DEPARTMENT-SERVICE
+#            uri: lb://DEPARTMENT-SERVICE
+#            predicates:
+#              - Path=/api/departments/**
+#
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
+
+

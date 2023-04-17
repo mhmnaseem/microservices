@@ -1,0 +1,28 @@
+#
+#server:
+#  port: 8081
+#
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka/
+#
+spring:
+  application:
+    name: "EMPLOYEE-SERVICE"
+  config:
+    import: 'optional:configserver:http://localhost:8888'
+
+#  datasource:
+#    username: postgres
+#    url: jdbc:postgresql://localhost:5432/employee
+#    password: 'google'
+#  jpa:
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.PostgreSQLDialect
+#        jdbc:
+#          lob:
+#            non_contextual_creation: 'true'
+#    hibernate:
+#      ddl-auto: update

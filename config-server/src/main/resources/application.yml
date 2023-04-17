@@ -1,0 +1,26 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: "CONFIG-SERVER"
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/mhmnaseem/config-server-repo
+          clone-on-start: true
+          force-pull: true
+          default-label: main
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
